@@ -11,6 +11,9 @@
             float: left;
             margin-right: 15px;
             margin-top: 20px;
+            width: 30px;
+            height: 30px;
+            position: relative;
         }
     </style>
 </head>
@@ -20,15 +23,15 @@
         <legend style="color:red; font-size:55px;">网页换肤</legend>
         <div style="width:720px;height:100px; border: 1px solid grey;">
             <ul>
-                <li id="skin_0" class="selected" title="灰色"><img src="img/grey.jpg"></li>
-                <li id="skin_1" title="紫色"><img src="img/purple.jpg"></li>
-                <li id="skin_2" title="粉色"><img src="img/pink.jpg"></li>
-                <li id="skin_3" title="蓝色"><img src="img/blue.jpg"></li>
-                <li id="skin_4" title="黄色"><img src="img/yellow.jpg"></li>
-                <li id="skin_5" title="绿色"><img src="img/green.jpg"></li>
+                <li id="skin_0" class="selected" title="灰色" style="background-color: grey;"></li>
+                <li id="skin_1" title="紫色" style="background-color: purple;"></li>
+                <li id="skin_2" title="粉色" style="background-color: pink;"></li>
+                <li id="skin_3" title="蓝色" style="background-color: blue;"></li>
+                <li id="skin_4" title="黄色" style="background-color: yellow;"></li>
+                <li id="skin_5" title="绿色" style="background-color: green;"></li>
             </ul>
         </div>
-        <div id="div1" class="skin_0" style="position: relative;width:700px;height:80px;margin-top:20px">
+        <div id="div1" class="skin_0" style="position: relative;width:700px;height:80px;margin-top:20px;">
             LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用。
         </div>
     </fieldset>
