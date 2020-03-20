@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        ul li {
+            list-style: none;
+            float: left;
+            margin-right: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset style="width:750x;">
+        <legend style="color:red; font-size:55px;">网页换肤</legend>
+        <div style="width:720px;height:100px; border: 1px solid grey;">
+            <ul>
+                <li id="skin_0" class="selected" title="灰色"><img src="img/grey.jpg"></li>
+                <li id="skin_1" title="紫色"><img src="img/purple.jpg"></li>
+                <li id="skin_2" title="粉色"><img src="img/pink.jpg"></li>
+                <li id="skin_3" title="蓝色"><img src="img/blue.jpg"></li>
+                <li id="skin_4" title="黄色"><img src="img/yellow.jpg"></li>
+                <li id="skin_5" title="绿色"><img src="img/green.jpg"></li>
+            </ul>
+        </div>
+        <div id="div1" class="skin_0" style="position: relative;width:700px;height:80px;margin-top:20px">
+            LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用。
+        </div>
+    </fieldset>
+</body>
+<script>
+    //获取html元素
+    var storage = window.localStorage;
+    var skin = document.getElementById("skin");
+    var skin0 = document.getElementById("skin0");
+    var skin1 = document.getElementById("skin1");
+    var skin2 = document.getElementById("skin2");
+    var skin3 = document.getElementById("skin3");
+    var skin4 = document.getElementById("skin4");
+    var skin5 = document.getElementById("skin5");
+    var li = document.getElementsByTagName("li");
+    var div1 = document.getElementById("div1");
+    //设置默认背景颜色
+    if (storage.length == 0) {
+        skin0.style.top = 5 + "px";
+        div1.style.backgroundColor = "grey";
+
+    } else {
+        div1.style.backgroundColor = storage.color;
+        document.getElementById(storage.id).style.top = 5 + "px";
+    }
+
+    //点击切换颜色
+    skin0.onclick = function() {
+        storage.clear();
+        for (var i = 0; i < li.length; i++) {
+            li[i].style.top = 15 + "px";
+        }
+        skin0.style.top = 5 + "px";
+        div1.style.backgroundColor = "grey";
+        storage.setItem("color", "grey");
+        storage.setItem("id", skin0.id);
+    }
+    skin1.onclick = function() {
+        storage.clear();
+        for (var i = 0; i < li.length; i++) {
+            li[i].style.top = 15 + "px";
+        }
+        skin1.style.top = 5 + "px";
+        div1.style.backgroundColor = "purple";
+        storage.setItem("color", "purple");
+        storage.setItem("id", skin1.id);
+    }
+    skin2.onclick = function() {
+        storage.clear();
+        for (var i = 0; i < li.length; i++) {
+            li[i].style.top = 15 + "px";
+        }
+        skin2.style.top = 5 + "px";
+        div1.style.backgroundColor = "pink";
+        storage.setItem("color", "pink");
+        storage.setItem("id", skin2.id);
+    }
+    skin3.onclick = function() {
+        storage.clear();
+        for (var i = 0; i < li.length; i++) {
+            li[i].style.top = 15 + "px";
+        }
+        skin3.style.top = 5 + "px";
+        div1.style.backgroundColor = "blue";
+        storage.setItem("color", "blue");
+        storage.setItem("id", skin3.id);
+    }
+    skin4.onclick = function() {
+        storage.clear();
+        for (var i = 0; i < li.length; i++) {
+            li[i].style.top = 15 + "px";
+        }
+        skin4.style.top = 5 + "px";
+        div1.style.backgroundColor = "yellow";
+        storage.setItem("color", "yellow");
+        storage.setItem("id", skin4.id);
+    }
+    skin5.onclick = function() {
+        storage.clear();
+        for (var i = 0; i < li.length; i++) {
+            li[i].style.top = 15 + "px";
+        }
+        skin5.style.top = 5 + "px";
+        div1.style.backgroundColor = "green";
+        storage.setItem("color", "green");
+        storage.setItem("id", skin5.id);
+    }
+</script>
+
+</html>
